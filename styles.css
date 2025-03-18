@@ -473,4 +473,31 @@ header {
 /* Additional spacing for section headers */
 .prose h2:first-of-type {
   margin-top: 30px;
+}
+
+/* Add these mobile-specific styles at the end of your CSS file */
+@media (max-width: 768px) {
+  /* Hide the name on mobile */
+  header .name {
+    display: none;
+  }
+  
+  /* Center the navigation */
+  header {
+    justify-content: center;
+    padding: 1rem 0.5rem;
+  }
+  
+  /* Add a bit more spacing between nav items */
+  header nav a {
+    margin: 0 0.75rem;
+  }
+  
+  /* Slightly reduce font size for navigation on very small screens */
+  @media (max-width: 360px) {
+    header nav a {
+      font-size: 0.9rem;
+      margin: 0 0.5rem;
+    }
+  }
 } 
