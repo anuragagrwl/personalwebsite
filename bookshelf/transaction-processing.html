@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Transaction Processing Summary by Anurag Agrawal">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <title>Transaction Processing - Summary</title>
+</head>
+<body>
+  <header>
+    <div class="name">Anurag Agrawal</div>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="index.html">Bookshelf</a>
+      <a href="../pow/index.html">POW</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Transaction Processing by Jim Gray and Andreas Reuter</h1>
+    <p class="date">August 2023</p>
+    <div class="prose">
+      <p>A comprehensive guide to the concepts and techniques behind building reliable, high-performance transaction processing systems, considered a foundational text in database systems.</p>
+      
+      <h2>Key Concepts</h2>
+      <ul>
+        <li><strong>ACID Properties:</strong> The fundamental guarantees of transaction processing - Atomicity, Consistency, Isolation, and Durability</li>
+        <li><strong>Concurrency Control:</strong> Methods for handling multiple simultaneous transactions while maintaining consistency</li>
+        <li><strong>Recovery Techniques:</strong> Approaches to ensure data durability and system resilience after failures</li>
+        <li><strong>Distributed Systems:</strong> Extending transaction processing principles across multiple nodes</li>
+      </ul>
+      
+      <h2>Personal Takeaways</h2>
+      <p>Despite its age, this book has been invaluable in my work building data platforms. When designing our transactional data system at 5X, I applied many of Gray's principles to ensure data integrity across distributed operations. The book's rigorous treatment of failure scenarios helped me anticipate and design for potential issues before they occurred in production.</p>
+      
+      <h2>Practical Applications</h2>
+      <p>I've directly applied the two-phase commit protocol described in the book when implementing distributed transactions in our data pipeline. Additionally, the concepts around isolation levels have guided our database configuration decisions, helping us balance performance with consistency requirements. The recovery mechanisms described have influenced our backup and disaster recovery strategies.</p>
+      
+      <h2>Recommendation</h2>
+      <p>Essential reading for anyone building systems that handle critical data transactions. While some implementation details have evolved, the fundamental principles remain highly relevant. The book requires significant technical background but rewards readers with a deep understanding of how to build truly reliable systems.</p>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html> 
