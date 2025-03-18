@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio of Anurag Agrawal, Product Leader">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Anurag Agrawal</title>
+</head>
+<body>
+  <header>
+    <div class="name">Anurag Agrawal</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="bookshelf/index.html">Bookshelf</a>
+      <a href="pow/index.html">POW</a>
+    </nav>
+  </header>
+  
+  <div class="scroll-container">
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+      <div class="welcome-content">
+        <h1 class="welcome-title">Welcome</h1>
+        <p class="welcome-text">I build products at the intersection of data and AI.</p>
+        <div class="scroll-indicator">
+          <!-- <p>Scroll to explore</p> -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 5L12 19M12 19L5 12M12 19L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 1 -->
+    <section class="content-section">
+      <div class="section-inner">
+        <p class="section-text"> I love to solve big problems</p>
+        <div class="stick-figure-container">
+          <svg class="stick-figure" width="220" height="220" viewBox="0 0 140 140" role="img" aria-label="Stick figure lifting block">
+            <!-- Head -->
+            <circle id="head" cx="70" cy="30" r="10" stroke="#fff" stroke-width="2" fill="none"/>
+            
+            <!-- Body -->
+            <line id="body" x1="70" y1="40" x2="70" y2="70" stroke="#fff" stroke-width="2"/>
+            
+            <!-- Arms -->
+            <line id="left-arm" x1="70" y1="50" x2="45" y2="40" stroke="#fff" stroke-width="2">
+              <animate attributeName="y2" values="40;35;40" dur="3s" repeatCount="indefinite" begin="0s"/>
+            </line>
+            <line id="right-arm" x1="70" y1="50" x2="95" y2="40" stroke="#fff" stroke-width="2">
+              <animate attributeName="y2" values="40;35;40" dur="3s" repeatCount="indefinite" begin="0s"/>
+            </line>
+            
+            <!-- Legs -->
+            <line id="left-leg" x1="70" y1="70" x2="55" y2="95" stroke="#fff" stroke-width="2"/>
+            <line id="right-leg" x1="70" y1="70" x2="85" y2="95" stroke="#fff" stroke-width="2"/>
+            
+            <!-- Simple Block - Adjusted to lift to head level -->
+            <rect id="block" x="45" y="65" width="50" height="25" rx="2" stroke="#fff" stroke-width="2" fill="none">
+              <animate attributeName="y" values="65;25;25;65" dur="3s" repeatCount="indefinite" begin="0s"/>
+            </rect>
+          </svg>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 2 -->
+    <section class="content-section">
+      <div class="section-inner">
+        <p class="section-text">I enjoy engaging with users </p>
+        <div class="stick-figure-container">
+          <svg class="stick-figure" width="220" height="220" viewBox="0 0 140 140" role="img" aria-label="Stick figure talking">
+            <!-- First person (talking) -->
+            <circle id="head2" cx="50" cy="30" r="10" stroke="#fff" stroke-width="2" fill="none"/>
+            <line id="body2" x1="50" y1="40" x2="50" y2="70" stroke="#fff" stroke-width="2"/>
+            <line id="left-arm2" x1="50" y1="50" x2="30" y2="60" stroke="#fff" stroke-width="2"/>
+            <line id="right-arm2" x1="50" y1="50" x2="70" y2="45" stroke="#fff" stroke-width="2">
+              <animate attributeName="y2" values="45;50;45" dur="1.5s" repeatCount="indefinite" begin="0s"/>
+              <animate attributeName="x2" values="70;75;70" dur="1.5s" repeatCount="indefinite" begin="0s"/>
+            </line>
+            <line id="left-leg2" x1="50" y1="70" x2="35" y2="95" stroke="#fff" stroke-width="2"/>
+            <line id="right-leg2" x1="50" y1="70" x2="65" y2="95" stroke="#fff" stroke-width="2"/>
+            
+            <!-- Second person (listening) -->
+            <circle id="head2b" cx="85" cy="30" r="10" stroke="#fff" stroke-width="2" fill="none"/>
+            <line id="body2b" x1="85" y1="40" x2="85" y2="70" stroke="#fff" stroke-width="2"/>
+            <line id="left-arm2b" x1="85" y1="50" x2="75" y2="60" stroke="#fff" stroke-width="2"/>
+            <line id="right-arm2b" x1="85" y1="50" x2="95" y2="60" stroke="#fff" stroke-width="2"/>
+            <line id="left-leg2b" x1="85" y1="70" x2="75" y2="95" stroke="#fff" stroke-width="2"/>
+            <line id="right-leg2b" x1="85" y1="70" x2="95" y2="95" stroke="#fff" stroke-width="2"/>
+            
+            <!-- Head nodding animation for listener -->
+            <animateTransform xlink:href="#head2b" attributeName="transform" type="rotate" 
+                            values="0,85,30; 5,85,30; 0,85,30; -5,85,30; 0,85,30" 
+                            dur="3s" repeatCount="indefinite" begin="0.5s"/>
+            
+            <!-- Speech bubble -->
+            <ellipse id="bubble1" cx="70" cy="15" rx="15" ry="10" stroke="#fff" stroke-width="2" fill="none" opacity="0">
+              <animate attributeName="opacity" values="0;1;0" dur="4s" repeatCount="indefinite" begin="0s"/>
+            </ellipse>
+            
+            <ellipse id="bubble2" cx="85" cy="10" rx="10" ry="7" stroke="#fff" stroke-width="2" fill="none" opacity="0">
+              <animate attributeName="opacity" values="0;0;1;0" dur="4s" repeatCount="indefinite" begin="0s"/>
+            </ellipse>
+          </svg>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 3 -->
+    <section class="content-section">
+      <div class="section-inner">
+        <p class="section-text">I have a passion for data and AI</p>
+        <div class="stick-figure-container">
+          <svg class="stick-figure" width="220" height="220" viewBox="0 0 140 140" role="img" aria-label="Stick figure with bar chart">
+            <!-- Head -->
+            <circle id="head3" cx="60" cy="30" r="10" stroke="#fff" stroke-width="2" fill="none"/>
+            
+            <!-- Body -->
+            <line id="body3" x1="60" y1="40" x2="60" y2="70" stroke="#fff" stroke-width="2"/>
+            
+            <!-- Arms -->
+            <line id="left-arm3" x1="60" y1="50" x2="40" y2="60" stroke="#fff" stroke-width="2"/>
+            <line id="right-arm3" x1="60" y1="50" x2="85" y2="50" stroke="#fff" stroke-width="2">
+              <animate attributeName="x2" values="85;90;85" dur="2s" repeatCount="indefinite" begin="0s"/>
+            </line>
+            
+            <!-- Legs -->
+            <line id="left-leg3" x1="60" y1="70" x2="45" y2="95" stroke="#fff" stroke-width="2"/>
+            <line id="right-leg3" x1="60" y1="70" x2="75" y2="95" stroke="#fff" stroke-width="2"/>
+            
+            <!-- Simple Bar Chart -->
+            <g id="simple-chart" transform="translate(85, 40)">
+              <!-- Chart background -->
+              <rect x="0" y="0" width="40" height="50" stroke="#fff" stroke-width="1" fill="none" opacity="0.3"/>
+              
+              <!-- Axes -->
+              <line x1="0" y1="0" x2="0" y2="50" stroke="#fff" stroke-width="1.5"/>
+              <line x1="0" y1="50" x2="40" y2="50" stroke="#fff" stroke-width="1.5"/>
+              
+              <!-- Bars -->
+              <rect id="bar1" x="5" y="50" width="6" height="0" fill="none" stroke="#fff" stroke-width="1.5">
+                <animate attributeName="height" values="0;30;25;35;30" dur="4s" repeatCount="indefinite" begin="0.2s"/>
+                <animate attributeName="y" values="50;20;25;15;20" dur="4s" repeatCount="indefinite" begin="0.2s"/>
+              </rect>
+              
+              <rect id="bar2" x="15" y="50" width="6" height="0" fill="none" stroke="#fff" stroke-width="1.5">
+                <animate attributeName="height" values="0;20;40;15;20" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+                <animate attributeName="y" values="50;30;10;35;30" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+              </rect>
+              
+              <rect id="bar3" x="25" y="50" width="6" height="0" fill="none" stroke="#fff" stroke-width="1.5">
+                <animate attributeName="height" values="0;40;20;30;40" dur="4s" repeatCount="indefinite" begin="0.8s"/>
+                <animate attributeName="y" values="50;10;30;20;10" dur="4s" repeatCount="indefinite" begin="0.8s"/>
+              </rect>
+              
+              <!-- Highlight pulse when bars reach peak -->
+              <circle id="data-pulse" cx="20" cy="25" r="22" stroke="#fff" stroke-width="0.5" fill="none" opacity="0">
+                <animate attributeName="opacity" values="0;0.3;0" dur="4s" repeatCount="indefinite" begin="2s"/>
+                <animate attributeName="r" values="15;22;15" dur="4s" repeatCount="indefinite" begin="2s"/>
+              </circle>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <div class="contact-icons">
+        <a href="mailto:anurag.agrawal@btech2013.iitgn.ac.in" aria-label="Email">
+          <svg class="icon" viewBox="0 0 24 24" width="32" height="32">
+            <path fill="#fff" d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5l8-5V8z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/anuragagrawaliitgn/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24" width="32" height="32">
+            <path fill="#fff" d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M9,17H6.5v-7H9V17z M7.7,8.7c-0.8,0-1.4-0.7-1.4-1.4c0-0.8,0.6-1.4,1.4-1.4c0.8,0,1.4,0.6,1.4,1.4C9.1,8.1,8.5,8.7,7.7,8.7z M18,17h-2.4v-3.8c0-1.5-0.5-1.8-1.2-1.8s-1.4,0.9-1.4,1.9V17h-2.5v-7h2.5v1.1c0.4-0.7,1.2-1.3,2.5-1.3s2.5,0.7,2.5,2.9V17z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/Another_Agrawal" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg class="icon" viewBox="0 0 24 24" width="32" height="32">
+            <path fill="#fff" d="M22.46,6c-0.77,0.35-1.6,0.58-2.46,0.69c0.88-0.53,1.56-1.37,1.88-2.38c-0.83,0.5-1.75,0.85-2.72,1.05C18.37,4.5,17.26,4,16,4c-2.35,0-4.27,1.92-4.27,4.29c0,0.34,0.04,0.67,0.11,0.98C8.28,9.09,5.11,7.38,3,4.79c-0.37,0.63-0.58,1.37-0.58,2.15c0,1.49,0.75,2.81,1.91,3.56c-0.71,0-1.37-0.2-1.95-0.5c0,0.02,0,0.03,0,0.05c0,2.08,1.48,3.82,3.44,4.21c-0.36,0.1-0.74,0.15-1.13,0.15c-0.27,0-0.54-0.03-0.8-0.08c0.54,1.69,2.11,2.95,4,2.98c-1.46,1.16-3.31,1.84-5.33,1.84c-0.34,0-0.68-0.02-1.02-0.06C3.44,20.29,5.7,21,8.12,21C16,21,20.33,14.46,20.33,8.79c0-0.19,0-0.37-0.01-0.56C21.17,7.65,21.88,6.87,22.46,6z"/>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html> 

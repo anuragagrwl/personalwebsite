@@ -1,0 +1,476 @@
+body {
+  background: #000000;
+  color: #FFFFFF;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+header:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+nav {
+  display: flex;
+  z-index: 100;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+nav a:hover { 
+  color: #CCCCCC; 
+}
+
+main {
+  margin: 100px auto 0;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.story p, .section-text, .contact p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.section-text {
+  margin-right: 40px;
+  font-size: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1.2s ease forwards;
+}
+
+.stick-figure-container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin-left: 0;
+}
+
+.stick-figure {
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.stick-figure circle,
+.stick-figure line,
+.stick-figure rect {
+  stroke-width: 2.5px;
+}
+
+/* Remove the old animation classes since we're using SVG animations */
+.stick-figure {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Simple fade-in animation for the SVGs */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Animation delays */
+.section:nth-child(1) .section-text { animation-delay: 0.5s; }
+.section:nth-child(1) .stick-figure { animation-delay: 0.8s; }
+.section:nth-child(2) .section-text { animation-delay: 1.2s; }
+.section:nth-child(2) .stick-figure { animation-delay: 1.5s; }
+.section:nth-child(3) .section-text { animation-delay: 1.9s; }
+.section:nth-child(3) .stick-figure { animation-delay: 2.2s; }
+
+a { 
+  color: #2B6CB0; 
+  text-decoration: none; 
+}
+
+a:hover { 
+  text-decoration: underline; 
+}
+
+.prose {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.prose p { 
+  font-size: 18px; 
+  margin-bottom: 20px; 
+}
+
+.prose a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
+.prose a:hover {
+  color: #CCCCCC;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: center;
+  position: relative;
+  padding: 0;
+}
+
+.section-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 40px;
+  gap: 60px;
+  margin: 0;
+}
+
+/* Welcome section styling */
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.welcome-title {
+  font-size: 84px;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.welcome-text {
+  font-size: 42px;
+  margin-bottom: 70px;
+  opacity: 0;
+  animation: fadeInSlideUp 1s ease forwards 0.5s;
+  max-width: 900px;
+}
+
+.scroll-indicator {
+  margin-top: 60px;
+  opacity: 0;
+  animation: fadeInPulse 2s ease infinite 1.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-indicator p {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.scroll-indicator svg {
+  width: 40px;
+  height: 40px;
+  transform: rotate(0deg);
+  animation: bounceArrow 2s ease-in-out infinite;
+  stroke-width: 2.5px;
+}
+
+.scroll-indicator svg path {
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+@keyframes fadeInPulse {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+}
+
+/* Contact section styling */
+.contact-section {
+  min-height: 40vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(30,30,30,1) 100%);
+}
+
+/* Adjust responsive design for scrollable layout */
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 56px;
+  }
+  
+  .welcome-text {
+    font-size: 32px;
+  }
+  
+  .section-inner {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+/* Ensure all sections are properly centered */
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Fix for text alignment */
+.section-text {
+  text-align: right; /* Align text to the right when next to the figure */
+  margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section-text {
+    text-align: center; /* Center text on mobile */
+    margin-right: 0;
+  }
+}
+
+/* Add styles for date on blog posts and book summaries */
+.date {
+  font-size: 18px;
+  color: #888;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Add styles for lists in blog posts and book summaries */
+.prose ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.prose li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Improve typography for better readability */
+.prose p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.prose h2 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+/* First h2 needs less top margin */
+.prose h2:first-of-type {
+  margin-top: 30px;
+}
+
+/* Add styles for strong text in prose */
+.prose strong {
+  font-weight: 700;
+}
+
+/* Add these new styles for the scrolling sections layout */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.scroll-container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-padding: 0;
+}
+
+/* Fix header positioning to not interfere with centering */
+header {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Add back missing contact icons styling */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Add missing animation keyframes */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeInSlideUp { 
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  } 
+}
+
+/* Add missing responsive styling */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .name {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  
+  nav {
+    margin-left: -10px;
+  }
+  
+  nav a {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+}
+
+/* Add missing section margins */
+.section {
+  margin-bottom: 80px;
+}
+
+/* Add styles for POW items */
+.pow-item {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pow-item:last-child {
+  border-bottom: none;
+}
+
+/* Create a flex layout for title and date */
+.pow-item h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* Style the date to appear on the same line */
+.pow-item .date {
+  display: inline-block;
+  margin: 0;
+  font-size: 16px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Better spacing between elements */
+.pow-item p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.pow-item ul {
+  margin-top: 10px;
+}
+
+/* Additional spacing for section headers */
+.prose h2:first-of-type {
+  margin-top: 30px;
+} 
